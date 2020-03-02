@@ -12,11 +12,25 @@ namespace Sweepstakes
     class ContestantInformationCollectionTool
     {
         Uservalidation val;
+        Support support;
         public ContestantInformationCollectionTool()
         {
             val = new Uservalidation();
         }
-        public void CollectValidatedEmail()
+
+
+
+
+
+        public void CreateNewContestant(Contestant contestant) 
+        {
+            contestant.FirstName = CollectFirstName();
+            contestant.LastName = CollectLastName();
+            contestant.Email = CollectValidatedEmail();
+            contestant.SetContestantRegNumber(GetRegistrationNumber());
+        }
+
+        private string CollectValidatedEmail()
         {
             string email = "";
             bool validated = false;
@@ -25,8 +39,26 @@ namespace Sweepstakes
                 email = UserInterface.DisplayEmailCollection(email);
                 validated = val.ValidateEmail(email);
             }
-            
 
+            return email;
+        }
+        private string CollectFirstName() 
+        {
+            string firstName = "";
+            firstName = UserInterface.DisplayFirstNameCollection(firstName);
+            firstName = val.ReturnCapitalizedAndFormatedName(firstName);
+            return firstName;
+        }
+        private string CollectLastName() 
+        {
+            string lastName = "";
+            lastName = UserInterface.DisplayFirstNameCollection(lastName);
+            lastName = val.ReturnCapitalizedAndFormatedName(lastName);
+            return lastName;
+        }
+        private int GetRegistrationNumber() 
+        {
+            return 1;
         }
     }
 }

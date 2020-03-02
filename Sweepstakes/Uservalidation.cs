@@ -24,5 +24,14 @@ namespace Sweepstakes
             }
             return validated;
         }
+        public string ReturnCapitalizedAndFormatedName(string name) 
+        {
+            name.Replace(" ", String.Empty);
+            char firstChar = name[0];
+            string charAsString = firstChar.ToString();
+            name.Replace(charAsString, charAsString.ToUpper());
+
+            return name;
+        }
     }
 }

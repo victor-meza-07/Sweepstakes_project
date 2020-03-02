@@ -46,9 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contestant.cs" />
+    <Compile Include="ISweeptstakesManager.cs" />
+    <Compile Include="MarketingFirm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ContestantInformationCollectionTool.cs" />
+    <Compile Include="Simulation.cs" />
+    <Compile Include="SweepStakes.cs" />
     <Compile Include="UserInterface.cs" />
     <Compile Include="Uservalidation.cs" />
   </ItemGroup>

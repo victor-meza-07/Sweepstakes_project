@@ -14,5 +14,18 @@ namespace Sweepstakes
             email = Console.ReadLine();
             return email;
         }
+        public static string DisplayFirstNameCollection(string firstName)
+        {
+            Console.WriteLine("Please enter your First Name");
+            firstName = Console.ReadLine();
+            return firstName;
+        }
+        public static string DisplayLastNameCollection(string lastName)
+        {
+            Console.WriteLine("Please enter your Last Name");
+            lastName = Console.ReadLine();
+            return lastName;
+        }
+        
     }
 }
