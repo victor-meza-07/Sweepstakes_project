@@ -10,6 +10,8 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
+            ContestantInformationCollectionTool ctool = new ContestantInformationCollectionTool();
+            ctool.CollectValidatedEmail();
         }
     }
 }
