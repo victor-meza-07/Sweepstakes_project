@@ -23,7 +23,8 @@ namespace Sweepstakes
             {
                 val = validation.GetUserValidationFromRangOfNumericalOptions(choice, 1, 2, out uchoice);
                 if (uchoice == -1) { Console.WriteLine("Please enter a value on screen"); }
-                else if (uchoice == -2) { Console.WriteLine("Please enter a value within the range of options"); }
+                else if (uchoice == -3) { Console.WriteLine("Please enter a value within the range of options"); }
+                if (val == false) { choice = UserInterface.DisplaySweepManagementMethod(); }
             }
             return uchoice;
         }

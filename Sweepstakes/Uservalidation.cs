@@ -42,7 +42,12 @@ namespace Sweepstakes
             {
                 choice = -2;//not an int
             }
-            if (minChoice < choice && choice <= maxChoice) 
+            if (minChoice == choice || choice <= maxChoice) 
+            {
+                validated = true;
+                choice = Int32.Parse(userchocie);
+            }
+            else
             {
                 choice = -3;//not in range
             }

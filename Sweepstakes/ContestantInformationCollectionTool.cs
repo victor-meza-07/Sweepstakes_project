@@ -26,7 +26,6 @@ namespace Sweepstakes
             contestant.FirstName = CollectFirstName();
             contestant.LastName = CollectLastName();
             contestant.Email = CollectValidatedEmail();
-            contestant.SetContestantRegNumber(GetRegistrationNumber());
         }
 
         private string CollectValidatedEmail()
@@ -54,10 +53,6 @@ namespace Sweepstakes
             lastName = UserInterface.DisplayFirstNameCollection(lastName);
             lastName = val.ReturnCapitalizedAndFormatedName(lastName);
             return lastName;
-        }
-        private int GetRegistrationNumber() 
-        {
-            return 1;
         }
     }
 }

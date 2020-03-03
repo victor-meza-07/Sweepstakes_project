@@ -9,13 +9,18 @@ namespace Sweepstakes
     class MarketingFirm
     {
         private ISweeptstakesManager _manager;
-        public MarketingFirm(ISweeptstakesManager manager)
+        public MarketingFirm(ISweeptstakesManager manager) // Constructor Injection
         {
-
+            _manager = manager;
         }
-        public void CreateSweepStake() 
+        public void CreateSweepStake()
         {
-
+            SweepStakes sweepStakes = new SweepStakes();
+            string name = "";
+            name = UserInterface.DisplaySweepstakeName(name);
+            sweepStakes.Sweepstakes(name);
+            _manager.InsertSweepStakes(sweepStakes);
+            
         }
     }
 }

@@ -43,6 +43,12 @@ namespace Sweepstakes
             Console.WriteLine(registrationNumber);
             Console.ReadLine();
         }
+        public static string DisplaySweepstakeName(string name) 
+        {
+            Console.WriteLine("Enter a name for the sweepstake");
+            name = Console.ReadLine();
+            return name;
+        }
         
     }
 }
