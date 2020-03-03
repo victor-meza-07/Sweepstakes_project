@@ -14,15 +14,18 @@ namespace Sweepstakes
             validation = new Uservalidation();
         }
 
-        public void GetDataModeInformation() 
+        public int GetDataModeInformation() 
         {
             string choice = UserInterface.DisplaySweepManagementMethod();
             bool val = false;
-            int uchoice;
+            int uchoice = 0;
             while (!val)
             {
                 val = validation.GetUserValidationFromRangOfNumericalOptions(choice, 1, 2, out uchoice);
+                if (uchoice == -1) { Console.WriteLine("Please enter a value on screen"); }
+                else if (uchoice == -2) { Console.WriteLine("Please enter a value within the range of options"); }
             }
+            return uchoice;
         }
     }
 }

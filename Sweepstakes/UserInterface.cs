@@ -35,6 +35,14 @@ namespace Sweepstakes
             userchoice = Console.ReadLine();
             return userchoice;
         }
+        public static void DisplayContestantInfo(string name, string email, int registrationNumber) 
+        {
+            Console.Title = "Contestant Info";
+            Console.WriteLine(name);
+            Console.WriteLine(email);
+            Console.WriteLine(registrationNumber);
+            Console.ReadLine();
+        }
         
     }
 }
