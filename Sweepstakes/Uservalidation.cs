@@ -33,5 +33,21 @@ namespace Sweepstakes
 
             return name;
         }
+        public bool GetUserValidationFromRangOfNumericalOptions(string userchocie, int minChoice, int maxChoice, out int choice) 
+        {
+            bool validated = false;
+            choice = -1;
+            try { Int32.Parse(userchocie); }
+            catch (Exception) 
+            {
+                choice = -2;//not an int
+            }
+            if (minChoice < choice && choice <= maxChoice) 
+            {
+                choice = -3;//not in range
+            }
+
+            return validated;
+        }
     }
 }

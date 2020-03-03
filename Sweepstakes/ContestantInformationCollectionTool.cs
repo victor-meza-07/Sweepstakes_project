@@ -12,7 +12,6 @@ namespace Sweepstakes
     class ContestantInformationCollectionTool
     {
         Uservalidation val;
-        Support support;
         public ContestantInformationCollectionTool()
         {
             val = new Uservalidation();

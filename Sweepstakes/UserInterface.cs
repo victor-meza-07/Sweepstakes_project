@@ -26,6 +26,15 @@ namespace Sweepstakes
             lastName = Console.ReadLine();
             return lastName;
         }
+        public static string DisplaySweepManagementMethod() 
+        {
+            string userchoice = "";
+            Console.Title = "Sweepstakes Manager";
+            Console.WriteLine("What data structure would you like to have?");
+            Console.WriteLine("1. First In Last Out   |   2. First In First Out");
+            userchoice = Console.ReadLine();
+            return userchoice;
+        }
         
     }
 }

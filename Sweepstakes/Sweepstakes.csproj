@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackEnd.cs" />
     <Compile Include="Contestant.cs" />
     <Compile Include="ISweeptstakesManager.cs" />
     <Compile Include="MarketingFirm.cs" />
@@ -52,7 +53,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ContestantInformationCollectionTool.cs" />
     <Compile Include="Simulation.cs" />
+    <Compile Include="SweepsrakesStackManager.cs" />
     <Compile Include="SweepStakes.cs" />
+    <Compile Include="SweeptakesQueueManager.cs" />
     <Compile Include="UserInterface.cs" />
     <Compile Include="Uservalidation.cs" />
   </ItemGroup>

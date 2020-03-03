@@ -13,7 +13,7 @@ namespace Sweepstakes
         {
 
         }
-        public void CreateSwepStake() 
+        public void CreateSweepStake() 
         {
 
         }
