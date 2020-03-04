@@ -12,6 +12,7 @@ namespace Sweepstakes
         private string name;
         private int registrationNumberCount;
         public string Name { get { return name; } }
+        public int RegistrationNumber { get { return registrationNumberCount; } }
         public SweepStakes()
         {
             contestants = new Dictionary<int, Contestant>();
@@ -38,11 +39,16 @@ namespace Sweepstakes
         }
         public void PrintContestantInfo(Contestant contestant) 
         {
-            string name = contestant.FirstName + " " + contestant.LastName;
-            string email = contestant.Email;
-            int registrationNumber = contestant.RegistrationNumber;
-
-
+            Console.WriteLine(" ");
+            Console.WriteLine(contestant.FirstName + " " + contestant.LastName);
+            Console.WriteLine(contestant.Email);
+            Console.WriteLine(contestant.RegistrationNumber); 
+        }
+        public Contestant GetContestant(int key) 
+        {
+            Contestant contestant = new Contestant();
+            contestants.TryGetValue(key, out contestant);
+            return contestant;
         }
 
 

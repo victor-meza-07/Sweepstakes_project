@@ -21,11 +21,12 @@ namespace Sweepstakes
 
 
 
-        public void CreateNewContestant(Contestant contestant) 
+        public Contestant CreateNewContestant(Contestant contestant) 
         {
             contestant.FirstName = CollectFirstName();
             contestant.LastName = CollectLastName();
             contestant.Email = CollectValidatedEmail();
+            return contestant;
         }
 
         private string CollectValidatedEmail()

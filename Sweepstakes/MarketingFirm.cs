@@ -16,11 +16,10 @@ namespace Sweepstakes
         public void CreateSweepStake()
         {
             SweepStakes sweepStakes = new SweepStakes();
-            string name = "";
+            string name = null;
             name = UserInterface.DisplaySweepstakeName(name);
             sweepStakes.Sweepstakes(name);
             _manager.InsertSweepStakes(sweepStakes);
-            
         }
     }
 }

@@ -31,6 +31,8 @@ namespace Sweepstakes
         {
             ISweeptstakesManager manager = GetModes();
             MarketingFirm marketingFirm = new MarketingFirm(manager);
+            back.AddASweeptake(marketingFirm);
+            
         }
     }
 }
